@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>South African Folklore Society (SAFOS)</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <style>
+        /* Fix for header overlapping content */
+        body {
+            padding-top: 80px;
+        }
+        
+        /* Banner adjustments */
+        #home {
+            margin-top: -80px;
+            padding-top: 80px;
+            min-height: calc(100vh - 80px);
+        }
+        
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 80px;
+        }
+        
+        /* Header positioning */
+        header {
+            top: 0;
+            left: 0;
+            right: 0;
+        }
+        
+        /* Mobile menu positioning */
+        #mobile-menu {
+            top: 80px;
+        }
+        
+        /* Mobile hover/active states */
+        @media (hover: none) {
+            .hover\:bg-\[\#600000\]:active, 
+            .hover\:bg-gray-100:active,
+            .group:hover .group-hover\:bg-opacity-80 {
+                background-color: #600000 !important;
+            }
+            .hover\:text-\[\#600000\]:active {
+                color: #600000 !important;
+            }
+        }
+        
+        /* Better mobile touch targets */
+        @media (max-width: 768px) {
+            a, button {
+                min-height: 48px;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+            }
+            #mobile-menu a {
+                font-size: 1.1rem;
+                padding: 16px 24px;
+            }
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-100">
+    <!-- Header -->
+<header class="bg-black text-white fixed w-full z-50">
+    <div class="container mx-auto flex justify-between items-center px-4 h-20">
+      <!-- Logo Container - Adjusted for mobile -->
+      
+      <div class="flex-shrink-0 h-full flex items-center py-2">
+        <img src="logo.png" alt="SAFOS Logo" 
+             class="h-48 sm:h-62 md:h-36 lg:h-40 w-auto max-w-[300px] md:max-w-[400px] object-contain">
+      </div>
+      
+  
+      <!-- Desktop Menu -->
+      <nav class="hidden md:block">
+        <ul class="flex space-x-4 lg:space-x-6 items-center h-full">
+          <li><a href="#home" class="hover:text-[#800000] px-2 lg:px-3 py-2 transition h-full flex items-center">Home</a></li>
+          <li><a href="#about" class="hover:text-[#800000] px-2 lg:px-3 py-2 transition h-full flex items-center">About</a></li>
+          <li><a href="#journal" class="hover:text-[#800000] px-2 lg:px-3 py-2 transition h-full flex items-center">Journal</a></li>
+          <li><a href="#committee" class="hover:text-[#800000] px-2 lg:px-3 py-2 transition h-full flex items-center">Members</a></li>
+          <li><a href="#events" class="hover:text-[#800000] px-2 lg:px-3 py-2 transition h-full flex items-center">Events</a></li>
+          <li><a href="#resources-membership" class="hover:text-[#800000] px-2 lg:px-3 py-2 transition h-full flex items-center">Membership</a></li>
+          <li><a href="#documents" class="hover:text-[#800000] px-2 lg:px-3 py-2 transition h-full flex items-center">Documents</a></li>
+          <li><a href="#contact" class="hover:text-[#800000] px-2 lg:px-3 py-2 transition h-full flex items-center">Contact</a></li>
+        </ul>
+      </nav>
+  
+      <!-- Mobile Menu Button - Made more visible -->
+      <button id="mobile-menu-button" class="md:hidden bg-[#800000] p-3 rounded-lg focus:outline-none">
+        <i class="fas fa-bars text-xl text-white"></i>
+      </button>
+    </div>
+  
+    <!-- Mobile Menu - Improved visibility -->
+    <div id="mobile-menu" class="md:hidden hidden bg-black text-white w-full absolute left-0 shadow-lg">
+      <ul class="py-2">
+        <li><a href="#home" class="block px-6 py-4 hover:bg-[#800000] active:bg-[#800000] text-lg border-b border-gray-800">Home</a></li>
+        <li><a href="#about" class="block px-6 py-4 hover:bg-[#800000] active:bg-[#800000] text-lg border-b border-gray-800">About</a></li>
+        <li><a href="#journal" class="block px-6 py-4 hover:bg-[#800000] active:bg-[#800000] text-lg border-b border-gray-800">Journal</a></li>
+        <li><a href="#committee" class="block px-6 py-4 hover:bg-[#800000] active:bg-[#800000] text-lg border-b border-gray-800">Members</a></li>
+        <li><a href="#events" class="block px-6 py-4 hover:bg-[#800000] active:bg-[#800000] text-lg border-b border-gray-800">Events</a></li>
+        <li><a href="#resources-membership" class="block px-6 py-4 hover:bg-[#800000] active:bg-[#800000] text-lg border-b border-gray-800">Membership</a></li>
+        <li><a href="#documents" class="block px-6 py-4 hover:bg-[#800000] active:bg-[#800000] text-lg border-b border-gray-800">Documents</a></li>
+        <li><a href="#contact" class="block px-6 py-4 hover:bg-[#800000] active:bg-[#800000] text-lg">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+    <!-- Banner Section -->
+    <section id="home" class="min-h-screen bg-[url('banner.jpg')] bg-cover bg-center flex items-center justify-center text-center text-white relative">
+        <div class="absolute inset-0 bg-black/50"></div>
+        <div class="container mx-auto px-6 relative z-10">
+            <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold mb-6">
+                Connecting Folklore Scholars, <span class="text-[#800000]">Preserving Traditions</span>, and Building Global Collaborations
+            </h1>
+            <p class="text-lg sm:text-xl mb-8 max-w-2xl mx-auto">
+                Welcome to the South African Folklore Society (SAFOS). We are dedicated to connecting folklore scholars, preserving traditions, and building global collaborations.
+            </p>
+            <a href="https://forms.gle/fGnsbWr98fYoWd2y6" class="bg-[#800000] text-white px-8 py-3 rounded-lg hover:bg-[#600000] active:bg-[#600000] transition duration-300 inline-block">
+                Become a Member
+            </a>
+        </div>
+    </section>
+
+    <!-- About SAFOS Section -->
+<!-- About SAFOS Section -->
+<section id="about" class="py-16 bg-white">
+    <div class="container mx-auto px-6">
+        <h2 class="text-3xl sm:text-4xl font-bold text-center mb-12">About SAFOS</h2>
+
+        <!-- CRITICAL NOTICE BOARD (NEW) -->
+        <div class="bg-[#FFF5F5] border-l-4 border-[#800000] p-4 mb-8 animate-pulse">
+            <div class="flex items-start">
+                <div class="flex-shrink-0 text-[#800000] mr-3 mt-1">
+                    <i class="fas fa-exclamation-triangle text-2xl"></i>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold text-[#800000] mb-2">ANNOUNCEMENT</h3>
+                    <div class="text-gray-800">
+                        <p class="mb-2">🚨 <strong>SAFOS 2025 Conference Abstract Deadline:</strong> 15 April 2025</p>
+                        <a href="#events" class="text-[#800000] hover:text-[#600000] font-semibold underline flex items-center mt-2">
+                            <i class="fas fa-arrow-right mr-2"></i> download poster
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Vision Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Vision Card 1 -->
+            <div class="text-center p-8 bg-gray-50 rounded-lg hover:shadow-lg transition duration-300 active:shadow-lg">
+                <i class="fas fa-handshake text-4xl text-[#800000] mb-6"></i>
+                <h3 class="text-xl font-semibold mb-4">Establish Connections</h3>
+                <p class="text-gray-700">
+                    To establish contact among researchers in the field of folklore, reflecting the transition from oral to written transmission. Emphasis will be given to work in folklore from oral countries of the world and SADC countries.
+                </p>
+            </div>
+
+            <!-- Vision Card 2 -->
+            <div class="text-center p-8 bg-gray-50 rounded-lg hover:shadow-lg transition duration-300 active:shadow-lg">
+                <i class="fas fa-book-open text-4xl text-[#800000] mb-6"></i>
+                <h3 class="text-xl font-semibold mb-4">Disseminate Knowledge</h3>
+                <p class="text-gray-700">
+                    To accumulate, correlate, and disseminate information on folklore among scholars by means of a journal, a supplement to the journal, and a newsletter.
+                </p>
+            </div>
+
+            <!-- Vision Card 3 -->
+            <div class="text-center p-8 bg-gray-50 rounded-lg hover:shadow-lg transition duration-300 active:shadow-lg">
+                <i class="fas fa-globe text-4xl text-[#800000] mb-6"></i>
+                <h3 class="text-xl font-semibold mb-4">Seek Affiliation</h3>
+                <p class="text-gray-700">
+                    To seek affiliation with other interested persons and institutions, both national and international, to foster collaboration and knowledge sharing.
+                </p>
+            </div>
+
+            <!-- Vision Card 4 -->
+            <div class="text-center p-8 bg-gray-50 rounded-lg hover:shadow-lg transition duration-300 active:shadow-lg">
+                <i class="fas fa-users text-4xl text-[#800000] mb-6"></i>
+                <h3 class="text-xl font-semibold mb-4">Foster Relations</h3>
+                <p class="text-gray-700">
+                    To foster working relations with other like-minded organizations to advance the study and preservation of folklore traditions globally.
+                </p>
+            </div>
+        </div>
+
+        <!-- Emblem 
+        <div class="mt-16 text-center">
+            <img src="emblem.jpg" alt="SAFOS Emblem" class="mx-auto w-48 h-48 mb-6" />
+            <p class="text-gray-700">
+                <strong>Note:</strong> The emblem and theme colors are used as per the provided document.
+            </p>
+        </div> -->
+    </div>
+</section>
+    
+    <!-- Journal Section -->
+    <section id="journal" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl sm:text-4xl font-bold text-center mb-12">Journal</h2>
+            <p class="text-lg text-center text-gray-700 mb-8">
+                Explore our latest publications and research in the field of folklore.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Journal Card 1 -->
+                <div class="text-center p-8 bg-white rounded-lg shadow-lg hover:shadow-xl transition duration-300">
+                    <i class="fas fa-book text-4xl text-[#800000] mb-6"></i>
+                    <h3 class="text-xl font-semibold mb-4">Latest Issue</h3>
+                    <p class="text-gray-700 mb-6">
+                        Access the most recent issue of our journal.
+                    </p>
+                    <a href="https://unisapressjournals.co.za/index.php/SAJFS" class="bg-[#800000] text-white px-6 py-2 rounded-lg hover:bg-[#600000] transition duration-300">
+                        Read Now
+                    </a>
+                </div>
+
+                <!-- Journal Card 2 -->
+                <div class="text-center p-8 bg-white rounded-lg shadow-lg hover:shadow-xl transition duration-300">
+                    <i class="fas fa-archive text-4xl text-[#800000] mb-6"></i>
+                    <h3 class="text-xl font-semibold mb-4">Past Issues</h3>
+                    <p class="text-gray-700 mb-6">
+                        Browse through our archive of past journal issues.
+                    </p>
+                    <a href=" https://unisapressjournals.co.za/index.php/SAJFS/issue/archive" class="bg-[#800000] text-white px-6 py-2 rounded-lg hover:bg-[#600000] transition duration-300">
+                        Read Now
+                    </a>
+                </div>
+
+                <!-- Journal Card 3 -->
+                <div class="text-center p-8 bg-white rounded-lg shadow-lg hover:shadow-xl transition duration-300">
+                    <i class="fas fa-pen text-4xl text-[#800000] mb-6"></i>
+                    <h3 class="text-xl font-semibold mb-4">Submit Your Work</h3>
+                    <p class="text-gray-700 mb-6">
+                        Submit your research or articles for publication.
+                    </p>
+                    <a href="https://unisapressjournals.co.za/index.php/SAJFS/login" class="bg-[#800000] text-white px-6 py-2 rounded-lg hover:bg-[#600000] transition duration-300">
+                        Submit Now
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Executive Committee & Editorial Teams Section -->
+<section id="committee" class="py-16 bg-white">
+    <div class="container mx-auto px-6">
+
+        <!-- Executive Committee -->
+        <h2 class="text-3xl sm:text-4xl font-bold text-center mb-4">SAFOS EXECUTIVE COMMITTEE</h2>
+        <p class="text-lg text-center text-gray-700 mb-12">
+            Leading the Vision: Meet SAFOS's Executive Leadership Team
+        </p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-8 mb-16">
+            <!-- Chairperson -->
+            <div class="text-center flex flex-col items-center p-4 bg-gray-50 rounded-lg group relative">
+                    <a href="chairperson.html" class="relative block">
+                    <div class="absolute inset-0 bg-[#800000] bg-opacity-0 group-hover:bg-opacity-80 transition-all duration-300 rounded-full w-48 h-48 mx-auto flex items-center justify-center">
+                        <span class="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-lg font-medium">Click for more</span>
+                    </div>
+                    <img src="char.png" alt="Delvah Mabaso" class="w-48 h-48 rounded-full mx-auto mb-4 hover:opacity-90 transition-opacity" />
+                </a>
+                <h3 class="text-xl font-semibold mb-2 px-2">Dr Madira Thetso</h3>
+                <p class="text-gray-700 mb-3">Chairperson</p>
+                <a href="mailto:delvah@safos.org" class="text-[#800000] hover:text-[#600000] mb-4 break-all px-2">
+                    chairperson@safos.org
+                </a>
+            </div>
+            
+            <!-- Deputy Chairperson -->
+            <div class="text-center flex flex-col items-center p-4 bg-gray-50 rounded-lg group relative">
+                <a href="deputy-chair.html" class="relative block">
+                    <div class="absolute inset-0 bg-[#800000] bg-opacity-0 group-hover:bg-opacity-80 transition-all duration-300 rounded-full w-48 h-48 mx-auto flex items-center justify-center">
+                        <span class="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-lg font-medium">Click for more</span>
+                    </div>
+                    <img src="dummy.jpeg" alt="Sinoyolo Nokutywa" class="w-48 h-48 rounded-full mx-auto mb-4 hover:opacity-90 transition-opacity" />
+                </a>
+                <h3 class="text-xl font-semibold mb-2 px-2">Vacant</h3>
+                <p class="text-gray-700 mb-3">Deputy Chairperson</p>
+                <a href="mailto:sinoyolo@safos.org" class="text-[#800000] hover:text-[#600000] mb-4 break-all px-2">
+                    Deputychair@safos.org
+                </a>
+            </div>
+
+            <!-- Secretary -->
+            <div class="text-center flex flex-col items-center p-4 bg-gray-50 rounded-lg group relative">
+                <a href="/secretary.html" class="relative block">
+                    <div class="absolute inset-0 bg-[#800000] bg-opacity-0 group-hover:bg-opacity-80 transition-all duration-300 rounded-full w-48 h-48 mx-auto flex items-center justify-center">
+                        <span class="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-lg font-medium">Click for more</span>
+                    </div>
+                    <img src="secret.png" alt="Thetso Madira" class="w-48 h-48 rounded-full mx-auto mb-4 hover:opacity-90 transition-opacity" />
+                </a>
+                <h3 class="text-xl font-semibold mb-2 px-2">Mr Delvah Mabaso</h3>
+                <p class="text-gray-700 mb-3">Secretary</p>
+                <a href="mailto:thetso@safos.org" class="text-[#800000] hover:text-[#600000] mb-4 break-all px-2">
+                    secretary@safos.org
+                </a>
+            </div>
+
+            <!-- Deputy Secretary -->
+            <div class="text-center flex flex-col items-center p-4 bg-gray-50 rounded-lg group relative">
+                <a href="deputy-secretary.html" class="relative block">
+                    <div class="absolute inset-0 bg-[#800000] bg-opacity-0 group-hover:bg-opacity-80 transition-all duration-300 rounded-full w-48 h-48 mx-auto flex items-center justify-center">
+                        <span class="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-lg font-medium">Click for more</span>
+                    </div>
+                    <img src="deptsecr.jpg" alt="Thetso Madira" class="w-48 h-48 rounded-full mx-auto mb-4 hover:opacity-90 transition-opacity" />
+                </a>
+                <h3 class="text-xl font-semibold mb-2 px-2">Mr Sinoyolo Nokutywa</h3>
+                <p class="text-gray-700 mb-3">Deputy Secretary</p>
+                <a href="mailto:thetso@safos.org" class="text-[#800000] hover:text-[#600000] mb-4 break-all px-2">
+                    deputysecretary@safos.org
+                </a>
+            </div>
+            
+            <!-- Treasurer -->
+            <div class="text-center flex flex-col items-center p-4 bg-gray-50 rounded-lg group relative">
+                <a href="treasurer.html" class="relative block">
+                    <div class="absolute inset-0 bg-[#800000] bg-opacity-0 group-hover:bg-opacity-80 transition-all duration-300 rounded-full w-48 h-48 mx-auto flex items-center justify-center">
+                        <span class="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-lg font-medium">Click for more</span>
+                    </div>
+                    <img src="treasurer.png" alt="Thetso Madira" class="w-48 h-48 rounded-full mx-auto mb-4 hover:opacity-90 transition-opacity" />
+                </a>
+                <h3 class="text-xl font-semibold mb-2 px-2">Dr Dumisani Spofana</h3>
+                <p class="text-gray-700 mb-3">Treasurer</p>
+                <a href="mailto:thetso@safos.org" class="text-[#800000] hover:text-[#600000] mb-4 break-all px-2">
+                    treasurer@safos.org
+                </a>
+            </div>
+            
+            <!-- Executive member-->
+            <div class="text-center flex flex-col items-center p-4 bg-gray-50 rounded-lg group relative">
+                <a href="execmember.html" class="relative block">
+                    <div class="absolute inset-0 bg-[#800000] bg-opacity-0 group-hover:bg-opacity-80 transition-all duration-300 rounded-full w-48 h-48 mx-auto flex items-center justify-center">
+                        <span class="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-lg font-medium">Click for more</span>
+                    </div>
+                    <img src="execcmember.png" alt="Dr Nompumelelo" class="w-48 h-48 rounded-full mx-auto mb-4 hover:opacity-90 transition-opacity" />
+                </a>
+                <h3 class="text-xl font-semibold mb-2 px-2">Dr Nompumelelo Kapa</h3>
+                <p class="text-gray-700 mb-3">Executive Member</p>
+                <a href="mailto:thetso@safos.org" class="text-[#800000] hover:text-[#600000] mb-4 break-all px-2">
+                    executivemember@safos.org
+                </a>
+            </div>
+        </div>
+        <!-- Editorial Team Section - Centered -->
+<div class="mb-16">
+    <h2 class="text-3xl sm:text-4xl font-bold text-center mb-4">EDITORIAL TEAM</h2>
+    <p class="text-lg text-center text-gray-700 mb-12">
+        Shaping Perspectives: The Editorial Leadership Team
+    </p>
+    <div class="flex justify-center">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-4xl">
+            <!-- Chief Editor -->
+            <div class="text-center flex flex-col items-center p-4 bg-gray-50 rounded-lg group relative">
+                <a href="/members/deputy-editor" class="relative block">
+                    <div class="absolute inset-0 bg-[#800000] bg-opacity-0 group-hover:bg-opacity-80 transition-all duration-300 rounded-full w-48 h-48 mx-auto flex items-center justify-center">
+                        <span class="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-lg font-medium">Click for more</span>
+                    </div>
+                    <img src="dummy.jpeg" alt="Deputy Editor" class="w-48 h-48 rounded-full mx-auto mb-4 hover:opacity-90 transition-opacity" />
+                </a>
+                <h3 class="text-xl font-semibold mb-2 px-2">Chief Editor Name</h3>
+                <p class="text-gray-700 mb-3">Chief Editor</p>
+                <a href="mailto:deputy-editor@safos.org" class="text-[#800000] hover:text-[#600000] mb-4 break-all px-2">
+                    chief-editor@safos.org
+                </a>
+            </div>
+
+            <!-- Sub Editor -->
+            <div class="text-center flex flex-col items-center p-4 bg-gray-50 rounded-lg group relative">
+                <a href="sub-editor.html" class="relative block">
+                    <div class="absolute inset-0 bg-[#800000] bg-opacity-0 group-hover:bg-opacity-80 transition-all duration-300 rounded-full w-48 h-48 mx-auto flex items-center justify-center">
+                        <span class="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-lg font-medium">Click for more</span>
+                    </div>
+                    <img src="sub editor.png" alt="sub Editor" class="w-48 h-48 rounded-full mx-auto mb-4 hover:opacity-90 transition-opacity" />
+                </a>
+                <h3 class="text-xl font-semibold mb-2 px-2">Dr. Mlamli Diko (Ph.D)</h3>
+                <p class="text-gray-700 mb-3">Sub Editor</p>
+                <a href="mailto:chief-editor@safos.org" class="text-[#800000] hover:text-[#600000] mb-4 break-all px-2">
+                    sub-editor@safos.org
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+    <!-- Editorial Board Members Section - Compact Single Row -->
+<div class="mb-16">
+    <h2 class="text-3xl sm:text-4xl font-bold text-center mb-4">EDITORIAL BOARD MEMBERS</h2>
+    <p class="text-lg text-center text-gray-700 mb-8">
+        Shaping Perspectives: The Editorial Leadership Team
+    </p>
+    <div class="flex justify-center">
+        <div class="flex overflow-x-auto pb-4 w-full max-w-screen-xl px-4">
+            <div class="flex space-x-6 min-w-max mx-auto">
+                <!-- Member One -->
+                <div class="text-center flex flex-col items-center p-4 bg-gray-50 rounded-lg group relative w-[260px]">
+                    <a href="/members/member-one" class="relative block">
+                        <div class="absolute inset-0 bg-[#800000] bg-opacity-0 group-hover:bg-opacity-80 transition-all duration-300 rounded-full w-40 h-40 mx-auto flex items-center justify-center">
+                            <span class="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-sm font-medium">View profile</span>
+                        </div>
+                        <img src="dummy.jpeg" alt="Member One" class="w-40 h-40 rounded-full mx-auto mb-3 hover:opacity-90 transition-opacity" />
+                    </a>
+                    <h3 class="text-lg font-semibold mb-1 px-2">Member One</h3>
+                    <p class="text-gray-600 text-sm mb-2">Editorial Board</p>
+                    <a href="mailto:member-one@safos.org" class="text-[#800000] hover:text-[#600000] text-sm break-all px-2">
+                        member-one@safos.org
+                    </a>
+                </div>
+
+                <!-- Member Two -->
+                <div class="text-center flex flex-col items-center p-4 bg-gray-50 rounded-lg group relative w-[260px]">
+                    <a href="/members/member-two" class="relative block">
+                        <div class="absolute inset-0 bg-[#800000] bg-opacity-0 group-hover:bg-opacity-80 transition-all duration-300 rounded-full w-40 h-40 mx-auto flex items-center justify-center">
+                            <span class="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-sm font-medium">View profile</span>
+                        </div>
+                        <img src="dummy.jpeg" alt="Member Two" class="w-40 h-40 rounded-full mx-auto mb-3 hover:opacity-90 transition-opacity" />
+                    </a>
+                    <h3 class="text-lg font-semibold mb-1 px-2">Member Two</h3>
+                    <p class="text-gray-600 text-sm mb-2">Editorial Board</p>
+                    <a href="mailto:member-two@safos.org" class="text-[#800000] hover:text-[#600000] text-sm break-all px-2">
+                        member-two@safos.org
+                    </a>
+                </div>
+
+                <!-- Member Three -->
+                <div class="text-center flex flex-col items-center p-4 bg-gray-50 rounded-lg group relative w-[260px]">
+                    <a href="/members/member-three" class="relative block">
+                        <div class="absolute inset-0 bg-[#800000] bg-opacity-0 group-hover:bg-opacity-80 transition-all duration-300 rounded-full w-40 h-40 mx-auto flex items-center justify-center">
+                            <span class="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-sm font-medium">View profile</span>
+                        </div>
+                        <img src="dummy.jpeg" alt="Member Three" class="w-40 h-40 rounded-full mx-auto mb-3 hover:opacity-90 transition-opacity" />
+                    </a>
+                    <h3 class="text-lg font-semibold mb-1 px-2">Member Three</h3>
+                    <p class="text-gray-600 text-sm mb-2">Editorial Board</p>
+                    <a href="mailto:member-three@safos.org" class="text-[#800000] hover:text-[#600000] text-sm break-all px-2">
+                        member-three@safos.org
+                    </a>
+                </div>
+
+                <!-- Member Four -->
+                <div class="text-center flex flex-col items-center p-4 bg-gray-50 rounded-lg group relative w-[260px]">
+                    <a href="/members/member-four" class="relative block">
+                        <div class="absolute inset-0 bg-[#800000] bg-opacity-0 group-hover:bg-opacity-80 transition-all duration-300 rounded-full w-40 h-40 mx-auto flex items-center justify-center">
+                            <span class="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-sm font-medium">View profile</span>
+                        </div>
+                        <img src="dummy.jpeg" alt="Member Four" class="w-40 h-40 rounded-full mx-auto mb-3 hover:opacity-90 transition-opacity" />
+                    </a>
+                    <h3 class="text-lg font-semibold mb-1 px-2">Member Four</h3>
+                    <p class="text-gray-600 text-sm mb-2">Editorial Board</p>
+                    <a href="mailto:member-four@safos.org" class="text-[#800000] hover:text-[#600000] text-sm break-all px-2">
+                        member-four@safos.org
+                    </a>
+                </div>
+
+                <!-- Member Five -->
+                <div class="text-center flex flex-col items-center p-4 bg-gray-50 rounded-lg group relative w-[260px]">
+                    <a href="/members/member-five" class="relative block">
+                        <div class="absolute inset-0 bg-[#800000] bg-opacity-0 group-hover:bg-opacity-80 transition-all duration-300 rounded-full w-40 h-40 mx-auto flex items-center justify-center">
+                            <span class="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-sm font-medium">View profile</span>
+                        </div>
+                        <img src="dummy.jpeg" alt="Member Five" class="w-40 h-40 rounded-full mx-auto mb-3 hover:opacity-90 transition-opacity" />
+                    </a>
+                    <h3 class="text-lg font-semibold mb-1 px-2">Member Five</h3>
+                    <p class="text-gray-600 text-sm mb-2">Editorial Board</p>
+                    <a href="mailto:member-five@safos.org" class="text-[#800000] hover:text-[#600000] text-sm break-all px-2">
+                        member-five@safos.org
+                    </a>
+                </div>
+
+                <!-- Member Six -->
+                <div class="text-center flex flex-col items-center p-4 bg-gray-50 rounded-lg group relative w-[260px]">
+                    <a href="/members/member-six" class="relative block">
+                        <div class="absolute inset-0 bg-[#800000] bg-opacity-0 group-hover:bg-opacity-80 transition-all duration-300 rounded-full w-40 h-40 mx-auto flex items-center justify-center">
+                            <span class="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-sm font-medium">View profile</span>
+                        </div>
+                        <img src="dummy.jpeg" alt="Member Six" class="w-40 h-40 rounded-full mx-auto mb-3 hover:opacity-90 transition-opacity" />
+                    </a>
+                    <h3 class="text-lg font-semibold mb-1 px-2">Member Six</h3>
+                    <p class="text-gray-600 text-sm mb-2">Editorial Board</p>
+                    <a href="mailto:member-six@safos.org" class="text-[#800000] hover:text-[#600000] text-sm break-all px-2">
+                        member-six@safos.org
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+
+
+<section id="events" class="py-16 bg-[#600000] text-white">
+    <div class="container mx-auto px-6">
+        <!-- ... other content ... -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Event Card 1 -->
+            <div class="text-center p-8 bg-white/10 rounded-lg hover:shadow-lg transition duration-300">
+                <i class="fas fa-calendar-alt text-4xl mb-6"></i>
+                <h3 class="text-xl font-semibold mb-4">SAFOS 2025 Conference</h3>
+                <p class="mb-4">Date: 25-26 September 2025</p>
+                <p class="mb-6">Location: Walter Sisulu University</p>
+                <a href="SAFOS conference second call for papers Feb 2025 (1) (1).pdf" download="SAFOS_Conference_2025.pdf" class="bg-white text-[#600000] px-6 py-2 rounded-lg hover:bg-gray-100 active:bg-gray-100 transition duration-300">
+                    Download
+                </a>
+            </div>
+            <div class="text-center p-8 bg-white/10 rounded-lg hover:shadow-lg transition duration-300">
+                <i class="fas fa-calendar-alt text-4xl mb-6"></i>
+                <h3 class="text-xl font-semibold mb-4">Folklore Workshop</h3>
+                <p class="mb-4">Date: [Insert Date]</p>
+                <p class="mb-6">Location: [Insert Location]</p>
+                <button class="bg-white text-[#600000] px-6 py-2 rounded-lg hover:bg-gray-100 transition duration-300">
+                    Register Now
+                </button>
+            </div>
+
+            <!-- Event Card 3 -->
+            <div class="text-center p-8 bg-white/10 rounded-lg hover:shadow-lg transition duration-300">
+                <i class="fas fa-calendar-alt text-4xl mb-6"></i>
+                <h3 class="text-xl font-semibold mb-4">Cultural Festival</h3>
+                <p class="mb-4">Date: [Insert Date]</p>
+                <p class="mb-6">Location: [Insert Location]</p>
+                <button class="bg-white text-[#600000] px-6 py-2 rounded-lg hover:bg-gray-100 transition duration-300">
+                    Register Now
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Resources and Membership Section -->
+    <section id="resources-membership" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl sm:text-4xl font-bold text-center mb-12">Resources & Membership</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Publications -->
+                <div class="text-center p-8 bg-white rounded-lg shadow-lg hover:shadow-xl transition duration-300">
+                    <div class="icon bg-gradient-to-r from-[#800000] to-[#600000] text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-book text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">Publications</h3>
+                    <p class="text-gray-700 mb-6">
+                        Access our latest journals and publications on folklore studies.
+                    </p>
+                   
+                    <a href="https://unisapressjournals.co.za/index.php/SAJFS/issue/view/758" class="bg-gradient-to-r from-[#800000] to-[#600000] text-white px-6 py-2 rounded-lg hover:from-[#600000] hover:to-[#800000] transition duration-300">
+                        view publications
+                    </a>
+                </div>
+
+                <!-- Donate -->
+                <div class="text-center p-8 bg-white rounded-lg shadow-lg hover:shadow-xl transition duration-300">
+                    <div class="icon bg-gradient-to-r from-[#800000] to-[#600000] text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-archive text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">Donate</h3>
+                    <p class="text-gray-700 mb-6">
+                        Please kindly donate for our Organization.
+                    </p>
+                    <button class="bg-gradient-to-r from-[#800000] to-[#600000] text-white px-6 py-2 rounded-lg hover:from-[#600000] hover:to-[#800000] transition duration-300">
+                        Donate
+                    </button>
+                </div>
+
+                <!-- Membership -->
+                <div class="text-center p-8 bg-white rounded-lg shadow-lg hover:shadow-xl transition duration-300">
+                    <div class="icon bg-gradient-to-r from-[#800000] to-[#600000] text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-user text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">Membership</h3>
+                    <p class="text-gray-700 mb-6">
+                        Membership is R200. Join to receive newsletters and stay updated on upcoming events.
+                    </p>
+                    <a href="https://forms.gle/fGnsbWr98fYoWd2y6" class="bg-gradient-to-r from-[#800000] to-[#600000] text-white px-6 py-2 rounded-lg hover:from-[#600000] hover:to-[#800000] transition duration-300">
+                        Join Now
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+<!-- Documents Section -->
+<section id="documents" class="pt-28 pb-16 relative bg-gray-50">
+    <div class="container mx-auto px-6 max-w-5xl relative z-10">
+         <!-- Page Header -->
+         <div class="text-center mb-12">
+             <div class="inline-block bg-[#FFF5F5] rounded-full p-3 mb-4">
+                 <i class="fas fa-file-alt text-[#800000] text-3xl"></i>
+             </div>
+             <h1 class="text-4xl font-bold text-[#800000] mb-3">Conference Materials</h1>
+             <p class="text-gray-600 max-w-2xl mx-auto">Approved abstracts and conference agenda</p>
+         </div>
+         
+         <!-- Notice About Sensitive Documents -->
+         <div class="bg-[#FFF5F5] border-l-4 border-[#800000] p-4 mb-8">
+             <div class="flex items-start">
+                 <div class="flex-shrink-0 text-[#800000] mr-3">
+                     <i class="fas fa-lock text-xl"></i>
+                 </div>
+                 <div>
+                     <h3 class="font-bold text-[#800000] mb-1">Document Access Policy</h3>
+                     <p class="text-gray-700 text-sm">Only abstracts from approved presentations are published. Full papers remain confidential.</p>
+                 </div>
+             </div>
+         </div>
+ 
+         <!-- Document Grid - Simplified for Conference Materials -->
+         <div class="grid grid-cols-1 gap-8">
+             <!-- Abstracts Section -->
+             <div class="bg-white rounded-xl shadow hover:shadow-md transition-all border border-gray-100 overflow-hidden">
+                 <div class="bg-[#800000] text-white px-6 py-3 flex items-center">
+                     <i class="fas fa-scroll mr-3 text-lg"></i>
+                     <h2 class="text-xl font-bold">Conference Abstracts</h2>
+                 </div>
+                 <div class="p-6">
+                     <div class="space-y-5">
+                         <!-- Current Year Abstracts -->
+                         <div class="flex flex-col sm:flex-row gap-4 items-start">
+                             <div class="flex-shrink-0 bg-[#FFF5F5] p-3 rounded-lg">
+                                 <i class="fas fa-calendar-check text-[#800000] text-xl"></i>
+                             </div>
+                             <div class="flex-grow">
+                                 <div class="flex justify-between items-start">
+                                     <h3 class="font-semibold text-gray-800">SAFOS 2025 Conference</h3>
+                                     <span class="text-xs bg-[#FFF5F5] text-[#800000] px-2 py-1 rounded">Latest</span>
+                                 </div>
+                                 <p class="text-sm text-gray-500 mb-2">Approved presentation abstracts | Updated: June 15, 2025</p>
+                                 <div class="flex flex-wrap gap-3">
+                                     <a href="SAFOS conference second call for papers Feb 2025 (1) (1).pdf" 
+                                        class="text-sm text-[#800000] hover:text-[#600000] flex items-center"
+                                        download="SAFOS_2025_Abstracts.pdf">
+                                         <i class="fas fa-file-pdf mr-1"></i> Download Abstracts (PDF)
+                                     </a>
+                                 </div>
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+ 
+             <!-- Agenda Section -->
+             <div class="bg-white rounded-xl shadow hover:shadow-md transition-all border border-gray-100 overflow-hidden">
+                 <div class="bg-[#800000] text-white px-6 py-3 flex items-center">
+                     <i class="fas fa-list-ol mr-3 text-lg"></i>
+                     <h2 class="text-xl font-bold">Conference Agenda</h2>
+                 </div>
+                 <div class="p-6">
+                     <div class="space-y-5">
+                         <div class="flex flex-col sm:flex-row gap-4 items-start">
+                             <div class="flex-shrink-0 bg-[#FFF5F5] p-3 rounded-lg">
+                                 <i class="fas fa-clock text-[#800000] text-xl"></i>
+                             </div>
+                             <div class="flex-grow">
+                                 <div class="flex justify-between items-start">
+                                     <h3 class="font-semibold text-gray-800">Final Conference Program</h3>
+                                     <span class="text-xs bg-[#FFF5F5] text-[#800000] px-2 py-1 rounded">Updated</span>
+                                 </div>
+                                 <p class="text-sm text-gray-500 mb-2">September 25-26, 2025 | Walter Sisulu University</p>
+                                 <div class="flex flex-wrap gap-3">
+                                     <a href="SAFOS conference second call for papers Feb 2025 (1) (1).pdf" 
+                                        class="text-sm text-[#800000] hover:text-[#600000] flex items-center"
+                                        download="SAFOS_2025_Agenda.pdf">
+                                         <i class="fas fa-file-pdf mr-1"></i> Download Full Agenda (PDF)
+                                     </a>
+                                 </div>
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+ 
+             <!-- Past Conferences Section -->
+             <div class="bg-white rounded-xl shadow hover:shadow-md transition-all border border-gray-100 overflow-hidden">
+                 <div class="bg-[#800000] text-white px-6 py-3 flex items-center">
+                     <i class="fas fa-archive mr-3 text-lg"></i>
+                     <h2 class="text-xl font-bold">Past Conferences</h2>
+                 </div>
+                 <div class="p-6">
+                     <div class="space-y-5">
+                         <div class="flex flex-col sm:flex-row gap-4 items-start">
+                             <div class="flex-shrink-0 bg-[#FFF5F5] p-3 rounded-lg">
+                                 <i class="fas fa-history text-[#800000] text-xl"></i>
+                             </div>
+                             <div class="flex-grow">
+                                 <h3 class="font-semibold text-gray-800 mb-2">Previous Years' Abstracts</h3>
+                                 <p class="text-sm text-gray-500 mb-3">Available abstracts from past conferences</p>
+                                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                     <a href="SAFOS conference second call for papers Feb 2025 (1) (1).pdf" 
+                                        class="text-sm text-[#800000] hover:text-[#600000] flex items-center"
+                                        download="SAFOS_2024_Abstracts.pdf">
+                                         <i class="fas fa-file-pdf mr-2"></i> 2024 Abstracts
+                                     </a>
+                                     <a href="SAFOS conference second call for papers Feb 2025 (1) (1).pdf" 
+                                        class="text-sm text-[#800000] hover:text-[#600000] flex items-center"
+                                        download="SAFOS_2023_Abstracts.pdf">
+                                         <i class="fas fa-file-pdf mr-2"></i> 2023 Abstracts
+                                     </a>
+                                 </div>
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+         </div>
+     </div>
+ </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl sm:text-4xl font-bold text-center mb-12">Contact Us</h2>
+            <form class="max-w-2xl mx-auto">
+                <input type="text" placeholder="Your Name" class="w-full p-3 mb-4 border rounded-lg" required />
+                <input type="email" placeholder="Your Email" class="w-full p-3 mb-4 border rounded-lg" required />
+                <textarea placeholder="Your Message" class="w-full p-3 mb-4 border rounded-lg" rows="5" required></textarea>
+                <button type="submit" class="bg-[#800000] text-white px-8 py-3 rounded-lg hover:bg-[#600000] transition duration-300">
+                    Send Message
+                </button>
+            </form>
+            <div class="text-center mt-8">
+                <p class="mb-2"><i class="fas fa-envelope mr-2"></i> info@safos.org</p>
+                <p class="mb-2"><i class="fas fa-phone mr-2"></i> +27 23 456 7890</p>
+                <p><i class="fas fa-map-marker-alt mr-2"></i> [Insert Address]</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#800000] text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- Footer Logo and Description -->
+                <div class="footer__logo">
+                    <img src="logo.jpg" alt="SAFOS Logo" class="h-12 mb-4" />
+                    <p class="text-sm">
+                        We are pioneering the future of education with AI intelligence to provide personalized learning experiences for students and foster a more effective and inclusive educational environment.
+                    </p>
+                </div>
+
+                <!-- Footer Contact Info -->
+                <div class="footer_call">
+                    <h3 class="text-lg font-semibold mb-4">Contact Us</h3>
+                    <p class="text-sm mb-2"><i class="fas fa-phone mr-2"></i> +27 78 425 3604</p>
+                    <p class="text-sm"><i class="fas fa-envelope mr-2"></i> Info@safos.co.za</p>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="quick-links">
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-sm hover:text-gray-300 transition duration-300"><i class="fas fa-angle-double-right mr-2"></i>SAFOS About</a></li>
+                        <li><a href="#" class="text-sm hover:text-gray-300 transition duration-300"><i class="fas fa-angle-double-right mr-2"></i>Contact Us</a></li>
+                        <li><a href="#" class="text-sm hover:text-gray-300 transition duration-300"><i class="fas fa-angle-double-right mr-2"></i>Blog & News</a></li>
+                    </ul>
+                </div>
+
+                <!-- Main Navigation -->
+                <div class="main-navigation">
+                    <h3 class="text-lg font-semibold mb-4">Main Navigation</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-sm hover:text-gray-300 transition duration-300"><i class="fas fa-angle-double-right mr-2"></i>FAQ’S</a></li>
+                        <li><a href="#" class="text-sm hover:text-gray-300 transition duration-300"><i class="fas fa-angle-double-right mr-2"></i>Login / Register</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Newsletter and Social Media -->
+            <div class="mt-12 border-t border-white/20 pt-8">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Newsletter -->
+                    <div class="newsletter">
+                        <h3 class="text-lg font-semibold mb-4">Newsletter</h3>
+                        <p class="text-sm mb-4">
+                            Sign up to receive weekly newsletter to get the latest updates.
+                        </p>
+                        <div class="flex items-center">
+                            <input type="email" placeholder="Enter Email Address" class="w-full p-2 border rounded-l-lg focus:outline-none" />
+                            <button class="bg-white text-[#800000] p-2 rounded-r-lg hover:bg-gray-100 transition duration-300">
+                                <i class="fas fa-envelope"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Social Media -->
+                    <div class="social-media md:col-span-2">
+                        <h3 class="text-lg font-semibold mb-4">Follow Us</h3>
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-white hover:text-gray-300 transition duration-300"><i class="fab fa-facebook text-2xl"></i></a>
+                            <a href="#" class="text-white hover:text-gray-300 transition duration-300"><i class="fab fa-linkedin text-2xl"></i></a>
+                            <a href="#" class="text-white hover:text-gray-300 transition duration-300"><i class="fab fa-youtube text-2xl"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Copyright and Policies -->
+            <div class="mt-8 text-center text-sm">
+                <p>&copy; All Copyright 2025 by SAFOS</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Menu Script -->
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('#mobile-menu a');
+      
+        mobileMenuButton.addEventListener('click', () => {
+          mobileMenu.classList.toggle('hidden');
+        });
+      
+        // Close menu when link clicked
+        mobileLinks.forEach(link => {
+          link.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+          });
+        });
+      
+        // Force PDF downloads on mobile
+        document.addEventListener('DOMContentLoaded', function () {
+          if (/Android|iPhone|iPad/i.test(navigator.userAgent)) {
+            document.querySelectorAll('a[href$=".pdf"]').forEach(pdfLink => {
+              if (!pdfLink.hasAttribute('download')) {
+                pdfLink.setAttribute('download', '');
+              }
+            });
+          }
+        });
+      </script>
+      
+</body>
+</html>
